@@ -1,12 +1,13 @@
-<div class="container">
+<div class="container" cdkDrag>
   <span class='order'>{{order}}</span>
   <mat-divider vertical class='divider'></mat-divider>
   <div class="data">
     <div class="doctor">
-      <span>Doctor:</span> {{doctor.lastName}} {{doctor.firstName}}
+      <span>Doctor:</span> {{data.doctor.lastName}} {{data.doctor.firstName}}
     </div>
     <div class="pacient">
-      <span>Pacient:</span> {{pacient.lastName}} {{pacient.firstName}}
+      <span>Pacient:</span> {{data.pacient.lastName}} {{data.pacient.firstName}}
     </div>
   </div>
+  <!-- <mat-icon aria-hidden="false" class="info" aria-label="Example home icon">info</mat-icon> -->
 </div>

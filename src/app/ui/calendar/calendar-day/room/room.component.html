@@ -1,9 +1,7 @@
 <div class="container">
   <div class="title">Sala {{roomNumber}}</div>
   <div class="procedures">
-    <app-procedure [order]='1'></app-procedure>
-    <app-procedure [order]='2'></app-procedure>
-    <app-procedure [order]='3'></app-procedure>
+    <app-procedure [order]='i+1' [data]='procedure' *ngFor="let procedure of procedures; let i = index"></app-procedure>
   </div>
 </div>
 

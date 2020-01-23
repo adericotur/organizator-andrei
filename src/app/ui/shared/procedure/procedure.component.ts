@@ -10,8 +10,7 @@ import { Pacient, IPacient } from 'src/app/models/pacient.model';
 export class ProcedureComponent implements OnInit {
 
   @Input() order: number;
-  public doctor: IDoctor = Doctor.mock();
-  public pacient: IPacient = Pacient.mock();
+  @Input() data: {doctor: Doctor, pacient: Pacient}
 
   constructor() { }
 

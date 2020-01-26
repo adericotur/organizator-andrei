@@ -1,9 +1,12 @@
-<div class="container" cdkDrag>
+<div class="container">
   <span class='order'>{{order}}</span>
   <mat-divider vertical class='divider'></mat-divider>
   <div class="data">
     <div class="doctor">
       <span>Doctor:</span> {{data.doctor.lastName}} {{data.doctor.firstName}}
+    </div>
+    <div class="procedure">
+      <span>Procedura:</span> Nefrectomie
     </div>
     <div class="pacient">
       <span>Pacient:</span> {{data.pacient.lastName}} {{data.pacient.firstName}}

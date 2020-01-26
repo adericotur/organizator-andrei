@@ -21,9 +21,7 @@ export class ProcedureComponent implements OnInit {
 
   openDialog() {
     this.dialog.open(DialogProcedureComponent, {
-      data: {
-        animal: 'panda'
-      }
+      data: this.data
     });
   }
 

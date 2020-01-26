@@ -18,7 +18,6 @@ export class RoomComponent implements OnInit {
   }
 
   drop(event: CdkDragDrop<string[]>) {
-    console.log('drop', event);
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } else {

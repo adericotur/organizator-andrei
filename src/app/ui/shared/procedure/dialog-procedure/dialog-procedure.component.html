@@ -1,15 +1,18 @@
-<h1 mat-dialog-title>Favorite Animal</h1>
+<h1>Detalii Procedura</h1>
 <div mat-dialog-content>
-  My favorite animal is:
-  <ul>
-    <li>
-      &#10003; Panda
-    </li>
-    <li>
-       Unicorn
-    </li>
-    <li>
-       Lion
-    </li>
-  </ul>
+  <h2>Doctor</h2>
+  <p>Nume: {{data.doctor.lastName}}</p>
+  <p>Prenume: {{data.doctor.firstName}}</p>
+  <p>Telefon: {{data.doctor.phone}}</p>
+  <mat-divider></mat-divider>
+
+  <h2>Pacient</h2>
+  <p>Nume: {{data.pacient.lastName}}</p>
+  <p>Prenume: {{data.pacient.firstName}}</p>
+  <p>Telefon: {{data.pacient.phone}}</p>
+  <p>Detalii: - </p>
+  <mat-divider></mat-divider>
+
+  <h2>Procedura</h2>
+  <p>Denumire: Nefrectomie</p>
 </div>

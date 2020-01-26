@@ -8,6 +8,7 @@ import {
   MatIconModule,
   MatCardModule,
   MatDividerModule,
+  MatDialogModule,
 } from '@angular/material';
 
 @NgModule({
@@ -18,6 +19,7 @@ import {
     MatIconModule,
     MatCardModule,
     MatDividerModule,
+    MatDialogModule,
     DragDropModule
   ],
   exports: [
@@ -27,6 +29,7 @@ import {
     MatIconModule,
     MatCardModule,
     MatDividerModule,
+    MatDialogModule,
     DragDropModule
   ]
 })

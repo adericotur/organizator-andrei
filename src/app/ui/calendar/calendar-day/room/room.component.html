@@ -1,7 +1,10 @@
 <div class="container">
-  <div class="title">Sala {{roomNumber}}</div>
-  <div class="procedures">
-    <app-procedure [order]='i+1' [data]='procedure' *ngFor="let procedure of procedures; let i = index"></app-procedure>
+  <div class="title">Sala {{data.number}}</div>
+  <div class="procedures"
+       cdkDropList
+       [cdkDropListData]='data.procedures'
+       (cdkDropListDropped)='drop($event)'>
+    <app-procedure [order]='i+1' [data]='procedure' *ngFor="let procedure of data.procedures; let i = index"></app-procedure>
   </div>
 </div>
 

@@ -7,11 +7,11 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CalendarDayComponent implements OnInit {
 
-  @Input() date: Date;
+  @Input() data;
   public dateFormat = 'dd.MM.yyyy';
-  public rooms = [1, 2, 3];
 
   constructor() { }
+
   ngOnInit() {
   }
 

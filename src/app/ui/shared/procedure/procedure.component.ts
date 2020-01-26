@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Doctor, IDoctor } from 'src/app/models/doctor.model';
 import { Pacient, IPacient } from 'src/app/models/pacient.model';
+import { MatDialog } from '@angular/material';
+import { DialogProcedureComponent } from './dialog-procedure/dialog-procedure.component';
 
 @Component({
   selector: 'app-procedure',
@@ -12,9 +14,17 @@ export class ProcedureComponent implements OnInit {
   @Input() order: number;
   @Input() data: {doctor: Doctor, pacient: Pacient}
 
-  constructor() { }
+  constructor(private dialog: MatDialog) { }
 
   ngOnInit() {
+  }
+
+  openDialog() {
+    this.dialog.open(DialogProcedureComponent, {
+      data: {
+        animal: 'panda'
+      }
+    });
   }
 
 }

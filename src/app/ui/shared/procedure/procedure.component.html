@@ -9,5 +9,8 @@
       <span>Pacient:</span> {{data.pacient.lastName}} {{data.pacient.firstName}}
     </div>
   </div>
-  <!-- <mat-icon aria-hidden="false" class="info" aria-label="Example home icon">info</mat-icon> -->
+  <div class="buttons">
+    <mat-icon aria-hidden="false" class="icon info" aria-label="Example home icon">info</mat-icon>
+    <mat-icon aria-hidden="false" class="icon edit" aria-label="Example home icon" (click)='openDialog()'>edit</mat-icon>
+  </div>
 </div>

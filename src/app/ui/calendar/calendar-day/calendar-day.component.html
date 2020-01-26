@@ -1,8 +1,8 @@
 <div class="container">
-  <div class="date">{{date | date : dateFormat}}</div>
+  <div class="date">{{data.date | date : dateFormat}}</div>
   <div class="rooms-container">
-    <div class="room" *ngFor="let room of rooms; let index i">
-      <app-room [roomNumber]='room'></app-room>
+    <div class="room" *ngFor="let roomData of data.rooms; let index i">
+      <app-room [data]='roomData'></app-room>
       <!-- <mat-divider></mat-divider> -->
     </div>
   </div>

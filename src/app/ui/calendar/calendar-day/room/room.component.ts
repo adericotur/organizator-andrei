@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Doctor } from 'src/app/models/doctor.model';
 import { Pacient } from 'src/app/models/pacient.model';
+import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-room',
@@ -9,15 +10,23 @@ import { Pacient } from 'src/app/models/pacient.model';
 })
 export class RoomComponent implements OnInit {
 
-  public procedures = [
-    {doctor: Doctor.mock(), pacient: Pacient.mock()},
-    {doctor: Doctor.mock(), pacient: Pacient.mock()},
-    {doctor: Doctor.mock(), pacient: Pacient.mock()},
-  ];
-  @Input() roomNumber: number;
+  @Input() data;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  drop(event: CdkDragDrop<string[]>) {
+    console.log('drop', event);
+    if (event.previousContainer === event.container) {
+      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+    } else {
+      transferArrayItem(event.previousContainer.data,
+                        event.container.data,
+                        event.previousIndex,
+                        event.currentIndex);
+    }
   }
 
 }

@@ -9,6 +9,7 @@ import { CalendarDayComponent } from './ui/calendar/calendar-day/calendar-day.co
 import { RoomComponent } from './ui/calendar/calendar-day/room/room.component';
 import { ProcedureComponent } from './ui/shared/procedure/procedure.component';
 import { MaterialModule } from './material.module';
+import { DialogProcedureComponent } from './ui/shared/procedure/dialog-procedure/dialog-procedure.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { MaterialModule } from './material.module';
     CalendarDayComponent,
     RoomComponent,
     ProcedureComponent,
+    DialogProcedureComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,6 +27,7 @@ import { MaterialModule } from './material.module';
     MaterialModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [DialogProcedureComponent]
 })
 export class AppModule { }

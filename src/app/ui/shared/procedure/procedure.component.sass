@@ -3,6 +3,7 @@ $border-dark: rgb(216, 216, 216)
 
 .container
   display: flex
+  min-height: 45px
   align-items: center
   margin: 2px 0
   padding: 5px 2px
@@ -24,13 +25,26 @@ $border-dark: rgb(216, 216, 216)
   font-size: .7rem
   color: #777777
 
-.info
-  font-size: .9rem
-  color: #bbbbbb
 
-.info:hover
-  cursor: pointer
 
 
 .doctor .pacient
   overflow-x: hidden
+
+.buttons
+  display: flex
+  flex-direction: column
+  margin-left: auto
+
+  .icon
+    font-size: .9rem
+    height: fit-content
+    width: fit-content
+    color: #bbbbbb
+    margin: 2px
+
+  .icon:hover
+    cursor: pointer
+
+  .info:hover
+    color: #737373

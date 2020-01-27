@@ -13,7 +13,38 @@
     </div>
   </div>
   <div class="buttons">
-    <mat-icon aria-hidden="false" class="icon info" aria-label="Example home icon">info</mat-icon>
+    <mat-icon aria-hidden="false"
+              class="icon info"
+              aria-label="Example home icon"
+              nz-popover
+              nzPopoverPlacement='right'
+              nzType="primary"
+              nzPopoverTrigger="hover"
+              [nzPopoverTitle]="popoverTitle"
+              [nzPopoverContent]="popoverContent">info</mat-icon>
     <mat-icon aria-hidden="false" class="icon edit" aria-label="Example home icon" (click)='openDialog()'>edit</mat-icon>
   </div>
+
 </div>
+
+<ng-template #popoverContent>
+  <div class="popover-content">
+    <h4>Doctor</h4>
+    <p>Nume: {{data.doctor.lastName}} {{data.doctor.firstName}}</p>
+    <p>Telefon: {{data.doctor.phone}}</p>
+    <mat-divider class="popover-divider"></mat-divider>
+
+    <h4>Pacient</h4>
+    <p>Nume: {{data.pacient.lastName}} {{data.pacient.firstName}}</p>
+    <p>Telefon: {{data.pacient.phone}}</p>
+    <mat-divider class="popover-divider"></mat-divider>
+
+    <h4>Procedura</h4>
+    <p>Denumire: {{data.procedure}}</p>
+    <p>Detalii: -</p>
+  </div>
+</ng-template>
+
+<ng-template #popoverTitle>
+  <h3 class="popover-title">Detalii</h3>
+</ng-template>

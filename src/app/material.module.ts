@@ -6,9 +6,12 @@ import {
   MatMenuModule,
   MatToolbarModule,
   MatIconModule,
+  MatInputModule,
   MatCardModule,
   MatDividerModule,
   MatDialogModule,
+  MatAutocompleteModule,
+  MatFormFieldModule,
 } from '@angular/material';
 
 @NgModule({
@@ -17,9 +20,12 @@ import {
     MatMenuModule,
     MatToolbarModule,
     MatIconModule,
+    MatInputModule,
     MatCardModule,
     MatDividerModule,
     MatDialogModule,
+    MatAutocompleteModule,
+    MatFormFieldModule,
     DragDropModule
   ],
   exports: [
@@ -27,9 +33,12 @@ import {
     MatMenuModule,
     MatToolbarModule,
     MatIconModule,
+    MatInputModule,
     MatCardModule,
     MatDividerModule,
     MatDialogModule,
+    MatAutocompleteModule,
+    MatFormFieldModule,
     DragDropModule
   ]
 })

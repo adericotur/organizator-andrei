@@ -3,6 +3,7 @@ import { Doctor, IDoctor } from 'src/app/models/doctor.model';
 import { Pacient, IPacient } from 'src/app/models/pacient.model';
 import { MatDialog } from '@angular/material';
 import { DialogProcedureComponent } from './dialog-procedure/dialog-procedure.component';
+import { Procedure } from 'src/app/models/procedure.model';
 
 @Component({
   selector: 'app-procedure',
@@ -12,7 +13,7 @@ import { DialogProcedureComponent } from './dialog-procedure/dialog-procedure.co
 export class ProcedureComponent implements OnInit {
 
   @Input() order: number;
-  @Input() data: {doctor: Doctor, pacient: Pacient}
+  @Input() data: Procedure;
 
   constructor(private dialog: MatDialog) { }
 

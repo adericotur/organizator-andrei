@@ -12,21 +12,10 @@ export class CalendarComponent implements OnInit {
 
   ngOnInit() {
     this.dataService.generateData();
-    console.log(this.dataService.viewData);
-    // this._initDates(new Date("2020-01-01"), new Date("2020-01-07"));
   }
 
   public get calendarData() {
     return this.dataService.viewData;
   }
-
-  // private _initDates(startDate: Date, endDate: Date) {
-  //   const diff = endDate.getDate() - startDate.getDate();
-  //   for(let i=0; i<diff; i++) {
-  //     const newDate = new Date();
-  //     newDate.setDate(startDate.getDate() + i);
-  //     this.dates.push(newDate);
-  //   }
-  // }
 
 }

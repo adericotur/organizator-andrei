@@ -5,7 +5,7 @@ export interface IDoctor {
   firstName: string;
   lastName: string;
   phone: string;
-  specialty: string;
+  specialty?: string;
 }
 
 export class Doctor {
@@ -13,7 +13,7 @@ export class Doctor {
   public firstName: string;
   public lastName: string;
   public phone: string;
-  public specialty: string;
+  public specialty?: string;
 
   constructor(source: IDoctor) {
     Object.assign(this, source);

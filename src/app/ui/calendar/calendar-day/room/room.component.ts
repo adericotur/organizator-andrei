@@ -2,6 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Doctor } from 'src/app/models/doctor.model';
 import { Pacient } from 'src/app/models/pacient.model';
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
+import { MatDialog } from '@angular/material';
+import { DialogProcedureComponent } from 'src/app/ui/shared/procedure/dialog-procedure/dialog-procedure.component';
 
 @Component({
   selector: 'app-room',
@@ -12,12 +14,12 @@ export class RoomComponent implements OnInit {
 
   @Input() data;
 
-  constructor() { }
+  constructor(private dialog: MatDialog) { }
 
   ngOnInit() {
   }
 
-  drop(event: CdkDragDrop<string[]>) {
+  public drop(event: CdkDragDrop<string[]>) {
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } else {
@@ -26,6 +28,14 @@ export class RoomComponent implements OnInit {
                         event.previousIndex,
                         event.currentIndex);
     }
+  }
+
+  public openAddModal() {
+    this.dialog.open(DialogProcedureComponent, {
+      width: '300px',
+      data: this.data,
+      autoFocus: false
+    });
   }
 
 }

@@ -1,7 +1,8 @@
 export abstract class Mocker {
   private static mockFirstNames: string[] = ['Adela', 'Ana', 'Alina', 'Doina', 'Dora', 'Rebeca', 'Roxana', 'Sabina', 'Andrei', 'Adrian', 'Teodor', 'Alin', 'Cornel'];
   private static mockLastNames: string[] = ['Popescu', 'Ionescu', 'Nita', 'Dumitrescu', 'Dima', 'Dobre', 'Tudor', 'Nistor', 'Dinu', 'Voinea', 'Albu', 'Toma', 'Stanescu', 'Sava'];
-  private static mockSpecialties: string[] = ['Chirurgie Generala', 'Chirurgie Pediatrica', 'Chirurgie Vasculara', 'Neurochirurgie', 'Oftalmologie', 'Ortopedie Pediatrica'];
+  // private static mockSpecialties: string[] = ['Chirurgie Generala', 'Chirurgie Pediatrica', 'Chirurgie Vasculara', 'Neurochirurgie', 'Oftalmologie', 'Ortopedie Pediatrica'];
+  private static mockSpecialties: string[] = ['Nefrologie', 'Hematologie', 'Pneumologie', 'Pediatrie', 'Psihiatrie', 'Reumatologie'];
   private static phonePrefixes: string[] = ['0785', '0766', '0744', '0782'];
 
   static firstName(): string {

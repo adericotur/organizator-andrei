@@ -1,18 +1,17 @@
-<h1>Detalii Procedura</h1>
+<h3 mat-dialog-title>Detalii Procedura</h3>
 <div mat-dialog-content>
-  <h2>Doctor</h2>
-  <p>Nume: {{data.doctor.lastName}}</p>
-  <p>Prenume: {{data.doctor.firstName}}</p>
-  <p>Telefon: {{data.doctor.phone}}</p>
-  <mat-divider></mat-divider>
-
-  <h2>Pacient</h2>
-  <p>Nume: {{data.pacient.lastName}}</p>
-  <p>Prenume: {{data.pacient.firstName}}</p>
-  <p>Telefon: {{data.pacient.phone}}</p>
-  <p>Detalii: - </p>
-  <mat-divider></mat-divider>
-
-  <h2>Procedura</h2>
-  <p>Denumire: Nefrectomie</p>
+  <form [formGroup]='procedureForm' class="example-form">
+    <mat-form-field class="example-full-width">
+      <input type="text" placeholder="Alege Doctorul" aria-label="Number" matInput [formControl]="doctorCtrl" [matAutocomplete]="auto">
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let doctor of filteredOptions | async" [value]="doctor.lastName + ' ' + doctor.firstName">
+          <div>{{doctor.lastName}} {{doctor.firstName}}</div>
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-stroked-button (click)="onClose()">Inchide</button>
+  <button mat-raised-button color='primary' (click)="onAddProcedure()">Adauga</button>
 </div>

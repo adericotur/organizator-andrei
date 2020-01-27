@@ -6,12 +6,14 @@ export interface IProcedure {
   id?: number;
   doctor: Doctor;
   pacient: Pacient;
+  procedure: string;
 }
 
 export class Procedure {
   public id?: number;
   public doctor: Doctor;
   public pacient: Pacient;
+  public procedure: string;
 
   constructor(source: IProcedure) {
     Object.assign(this, source);
@@ -20,7 +22,8 @@ export class Procedure {
   static mock(): Procedure {
     return new Procedure({
       doctor: Doctor.mock(),
-      pacient: Pacient.mock()
+      pacient: Pacient.mock(),
+      procedure: Mocker.specialty()
     });
   }
 }

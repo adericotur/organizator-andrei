@@ -1,5 +1,8 @@
 <div class="container">
-  <div class="title">Sala {{data.number}}</div>
+  <div class="header">
+    <div class="title">Sala {{data.number}}</div>
+    <mat-icon class="create-button" (click)="openAddModal()">add_circle_outline</mat-icon>
+  </div>
   <div class="procedures-container"
        cdkDropList
        [cdkDropListData]='data.procedures'

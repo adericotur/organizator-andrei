@@ -10,6 +10,7 @@ import { RoomComponent } from './ui/calendar/calendar-day/room/room.component';
 import { ProcedureComponent } from './ui/shared/procedure/procedure.component';
 import { MaterialModule } from './material.module';
 import { DialogProcedureComponent } from './ui/shared/procedure/dialog-procedure/dialog-procedure.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { DialogProcedureComponent } from './ui/shared/procedure/dialog-procedure
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
     MaterialModule
   ],
   providers: [],

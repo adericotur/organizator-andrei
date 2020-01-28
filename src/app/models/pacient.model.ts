@@ -5,7 +5,7 @@ export interface IPacient {
   firstName: string;
   lastName: string;
   phone: string;
-  mentions: string[];
+  mentions?: string[];
 
 }
 
@@ -14,7 +14,7 @@ export class Pacient {
   public firstName: string;
   public lastName: string;
   public phone: string;
-  public mentions: string[];
+  public mentions?: string[];
 
   constructor(source: IPacient) {
     Object.assign(this, source);
@@ -25,7 +25,6 @@ export class Pacient {
       firstName: Mocker.firstName(),
       lastName: Mocker.lastName(),
       phone: Mocker.phoneNo(),
-      mentions: []
     });
   }
 }

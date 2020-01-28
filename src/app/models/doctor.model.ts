@@ -4,7 +4,7 @@ export interface IDoctor {
   id?: number;
   firstName: string;
   lastName: string;
-  phone: string;
+  phone?: string;
   specialty?: string;
 }
 
@@ -12,7 +12,7 @@ export class Doctor {
   public id?: number;
   public firstName: string;
   public lastName: string;
-  public phone: string;
+  public phone?: string;
   public specialty?: string;
 
   constructor(source: IDoctor) {

@@ -6,7 +6,7 @@
       <span>Doctor:</span> {{data.doctor.lastName}} {{data.doctor.firstName}}
     </div>
     <div class="procedure">
-      <span>Procedura:</span> {{data.procedure}}
+      <span>Procedura:</span> {{data.procedure.name}}
     </div>
     <div class="pacient">
       <span>Pacient:</span> {{data.pacient.lastName}} {{data.pacient.firstName}}
@@ -40,7 +40,7 @@
     <mat-divider class="popover-divider"></mat-divider>
 
     <h4>Procedura</h4>
-    <p>Denumire: {{data.procedure}}</p>
+    <p>Denumire: {{data.procedure.name}}</p>
     <p>Detalii: -</p>
   </div>
 </ng-template>

@@ -1,4 +1,8 @@
 import { Injectable } from '@angular/core';
+import { Mocker } from '../models/mocker';
+import { Doctor } from '../models/doctor.model';
+import { Pacient } from '../models/pacient.model';
+import { ProcedureComponent } from '../ui/shared/procedure/procedure.component';
 import { Procedure } from '../models/procedure.model';
 
 @Injectable({
@@ -43,9 +47,9 @@ export class DataService {
     return {
       number: roomNo,
       procedures: [
-        Procedure.mock(),
-        Procedure.mock(),
-        Procedure.mock(),
+        {doctor: Doctor.mock(), pacient: Pacient.mock(), procedure: Procedure.mock()},
+        {doctor: Doctor.mock(), pacient: Pacient.mock(), procedure: Procedure.mock()},
+        {doctor: Doctor.mock(), pacient: Pacient.mock(), procedure: Procedure.mock()},
       ]
     };
   }

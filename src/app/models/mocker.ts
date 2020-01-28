@@ -1,3 +1,5 @@
+import { Doctor } from './doctor.model';
+
 export abstract class Mocker {
   private static mockFirstNames: string[] = ['Adela', 'Ana', 'Alina', 'Doina', 'Dora', 'Rebeca', 'Roxana', 'Sabina', 'Andrei', 'Adrian', 'Teodor', 'Alin', 'Cornel'];
   private static mockLastNames: string[] = ['Popescu', 'Ionescu', 'Nita', 'Dumitrescu', 'Dima', 'Dobre', 'Tudor', 'Nistor', 'Dinu', 'Voinea', 'Albu', 'Toma', 'Stanescu', 'Sava'];

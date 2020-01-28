@@ -1,11 +1,27 @@
 <h3 mat-dialog-title>Detalii Procedura</h3>
 <div mat-dialog-content>
   <form [formGroup]='procedureForm' class="example-form">
-    <mat-form-field class="example-full-width">
-      <input type="text" placeholder="Alege Doctorul" aria-label="Number" matInput [formControl]="doctorCtrl" [matAutocomplete]="auto">
-      <mat-autocomplete #auto="matAutocomplete">
-        <mat-option *ngFor="let doctor of filteredOptions | async" [value]="doctor.lastName + ' ' + doctor.firstName">
+    <mat-form-field>
+      <input type="text" placeholder="Alege Doctorul" aria-label="Number" matInput [formControl]="doctorCtrl" [matAutocomplete]="doctorAuto">
+      <mat-autocomplete #doctorAuto="matAutocomplete" [displayWith]="displayPersonFn">
+        <mat-option *ngFor="let doctor of filteredDoctors$ | async" [value]="doctor">
           <div>{{doctor.lastName}} {{doctor.firstName}}</div>
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+    <mat-form-field>
+      <input type="text" placeholder="Alege Tipul Interventiei" aria-label="Number" matInput [formControl]="procedureCtrl" [matAutocomplete]="procedureAuto">
+      <mat-autocomplete #procedureAuto="matAutocomplete" [displayWith]="displayProcedureFn">
+        <mat-option *ngFor="let procedure of filteredProcedures$ | async" [value]="procedure">
+          <div>{{procedure.name}}</div>
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+    <mat-form-field>
+      <input type="text" placeholder="Alege Pacientul" aria-label="Number" matInput [formControl]="pacientCtrl" [matAutocomplete]="pacientAuto">
+      <mat-autocomplete #pacientAuto="matAutocomplete" [displayWith]="displayPersonFn">
+        <mat-option *ngFor="let pacient of filteredPacients$ | async" [value]="pacient">
+          <div>{{pacient.lastName}} {{pacient.firstName}}</div>
         </mat-option>
       </mat-autocomplete>
     </mat-form-field>

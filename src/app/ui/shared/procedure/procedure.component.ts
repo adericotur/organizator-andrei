@@ -13,7 +13,7 @@ import { Procedure } from 'src/app/models/procedure.model';
 export class ProcedureComponent implements OnInit {
 
   @Input() order: number;
-  @Input() data: Procedure;
+  @Input() data: {doctor: Doctor, pacient: Pacient, procedure: Procedure};
 
   constructor(private dialog: MatDialog) { }
 
